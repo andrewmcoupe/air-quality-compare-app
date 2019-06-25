@@ -9,9 +9,13 @@ function LocationCard(props) {
 		<div className="location-card">
 			<span
 				role="button"
+				tabIndex="0"
 				aria-label="Remove location card"
 				className="location-card__close-icon"
 				onClick={() => props.removeCity(props.location)}
+				onKeyDown={evt =>
+					evt.keyCode !== 13 || props.removeCity(props.location)
+				}
 			>
 				<FaTimes size="28px" color="#6b6b6b" />
 			</span>
