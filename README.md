@@ -1,4 +1,4 @@
-[Demo](https://compare-your-air.netlify.com/)
+## [Click here to use the app](https://compare-your-air.netlify.com/)
 
 ## Install dependencies
 
