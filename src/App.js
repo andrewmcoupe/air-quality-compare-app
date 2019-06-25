@@ -1,10 +1,9 @@
 import './App.scss';
 
-import React, { useEffect, useState } from 'react';
-
 import Intro from './components/Intro/Intro';
 import LocationCard from './components/LocationCard/LocationCard';
 import LocationList from './components/LocationList/LocationList';
+import React from 'react';
 import useOpenAqApi from './hooks/useOpenAqApi';
 import useSelectedCity from './hooks/useSelectedCity';
 
