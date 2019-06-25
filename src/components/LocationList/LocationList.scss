@@ -1,3 +1,5 @@
+$tablet: 768px;
+
 .location-list {
 	max-height: 170px;
 	overflow: scroll;
@@ -11,10 +13,17 @@
 	padding-top: 16px;
 	margin-bottom: 0;
 
+	@media (min-width: $tablet) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+
 	li {
 		list-style: none;
-		padding: 8px 16px;
+		padding: 16px 24px;
 		cursor: pointer;
+		font-size: 16px;
 
 		&:hover {
 			background: #ececec;

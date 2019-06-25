@@ -44,6 +44,11 @@ $desktop: 990px;
 		position: relative;
 		z-index: 1;
 
+		@media (min-width: $tablet) {
+			width: 60%;
+			margin: 32px auto;
+		}
+
 		svg {
 			position: absolute;
 			top: 50%;
@@ -58,6 +63,7 @@ $desktop: 990px;
 			border: solid 1px lightgray;
 			padding-left: 48px;
 			font-size: 16px;
+			outline: none;
 		}
 	}
 }
