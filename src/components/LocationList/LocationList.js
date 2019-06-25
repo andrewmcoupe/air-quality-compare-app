@@ -1,8 +1,8 @@
-import "./LocationList.scss";
+import './LocationList.scss';
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa';
 
 function LocationList(props) {
 	const inputEl = useRef(null);
@@ -10,7 +10,7 @@ function LocationList(props) {
 
 	const handleSelectedCity = city => {
 		props.handleSelectedCity(city);
-		inputEl.current.value = "";
+		inputEl.current.value = '';
 
 		setFilteredCities([]);
 	};
@@ -35,6 +35,7 @@ function LocationList(props) {
 			<div className="input-container">
 				<FaSearch size={25} color="lightgrey" />
 				<input
+					id="search"
 					role="search"
 					type="text"
 					ref={inputEl}

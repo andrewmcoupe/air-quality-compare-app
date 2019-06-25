@@ -1,4 +1,4 @@
-## Demo link to go here
+[Demo](https://compare-your-air.netlify.com/)
 
 ## Install dependencies
 
@@ -22,11 +22,11 @@ You will also see any lint errors in the console.
 
 ## Run Cypress tests
 
-### `yarn run cy:test`
+### `yarn run cy:pretest`
 
 Launches the test runner in the interactive watch mode.<br>
 
-## Run Cypress tests
+## Build
 
 ### `yarn run build`
 

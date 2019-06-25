@@ -18,25 +18,7 @@ $desktop: 990px;
 		box-sizing: border-box;
 	}
 
-	.intro-container {
-		text-align: center;
 
-		h1 {
-			margin-bottom: 24px;
-
-			@media (min-width: $tablet) {
-				font-size: 40px;
-			}
-		}
-
-		p {
-			margin-bottom: 16px;
-
-			@media (min-width: $tablet) {
-				font-size: 22px;
-			}
-		}
-	}
 
 	.input-container {
 		margin: 32px 0;

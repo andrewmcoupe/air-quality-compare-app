@@ -1,0 +1,21 @@
+  $tablet: 768px;
+  
+  .intro-container {
+		text-align: center;
+
+		h1 {
+			margin-bottom: 24px;
+
+			@media (min-width: $tablet) {
+				font-size: 40px;
+			}
+		}
+
+		p {
+			margin-bottom: 16px;
+
+			@media (min-width: $tablet) {
+				font-size: 22px;
+			}
+		}
+	}

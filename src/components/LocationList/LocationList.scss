@@ -3,6 +3,7 @@ $tablet: 768px;
 .location-list {
 	max-height: 170px;
 	overflow: scroll;
+	overflow-x: hidden;
 	padding: 16px;
 	background: white;
 	position: relative;
