@@ -11,6 +11,7 @@ function LocationList(props) {
 	const handleSelectedCity = city => {
 		props.handleSelectedCity(city);
 		inputEl.current.value = '';
+		inputEl.current.focus();
 
 		setFilteredCities([]);
 	};
@@ -50,6 +51,7 @@ function LocationList(props) {
 							key={index}
 							tabIndex="0"
 							onClick={() => handleSelectedCity(city)}
+							onKeyDown={evt => evt.keyCode !== 13 || handleSelectedCity(city)}
 						>
 							{city.city} - {city.location}
 						</li>
