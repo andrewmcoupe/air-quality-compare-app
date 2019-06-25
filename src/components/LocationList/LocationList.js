@@ -16,14 +16,14 @@ function LocationList(props) {
 	};
 
 	const filterCities = query => {
-		if (query.length < 2) {
+		if (query.length === 0) {
 			return setFilteredCities([]);
 		}
 		const lowercaseQuery = query.toLowerCase();
 
 		if (props.cities) {
 			const filtered = props.cities.filter(city => {
-				return city.city.toLowerCase().includes(lowercaseQuery);
+				return city.city.toLowerCase().startsWith(lowercaseQuery);
 			});
 
 			setFilteredCities(filtered);
