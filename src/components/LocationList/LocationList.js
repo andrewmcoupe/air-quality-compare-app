@@ -35,6 +35,7 @@ function LocationList(props) {
 			<div className="input-container">
 				<FaSearch size={25} color="lightgrey" />
 				<input
+					autoComplete="off"
 					id="search"
 					role="search"
 					type="text"
