@@ -1,0 +1,23 @@
+.location-list {
+	max-height: 170px;
+	overflow: scroll;
+	padding: 16px;
+	background: white;
+	position: relative;
+	top: -58px;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	padding: 0;
+	padding-top: 16px;
+	margin-bottom: 0;
+
+	li {
+		list-style: none;
+		padding: 8px 16px;
+		cursor: pointer;
+
+		&:hover {
+			background: #ececec;
+		}
+	}
+}
