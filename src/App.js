@@ -1,15 +1,15 @@
-import './App.scss';
+import "./scss/App.scss";
 
-import Intro from './components/Intro/Intro';
-import LocationCard from './components/LocationCard/LocationCard';
-import LocationList from './components/LocationList/LocationList';
-import React from 'react';
-import useOpenAqApi from './hooks/useOpenAqApi';
-import useSelectedCity from './hooks/useSelectedCity';
+import Intro from "./components/Intro/Intro";
+import LocationCard from "./components/LocationCard/LocationCard";
+import LocationList from "./components/LocationList/LocationList";
+import React from "react";
+import useOpenAqApi from "./hooks/useOpenAqApi";
+import useSelectedCity from "./hooks/useSelectedCity";
 
 function App() {
 	const { data: cities, isLoading } = useOpenAqApi(
-		'https://api.openaq.org/v1/latest?country=GB&limit=1000'
+		"https://api.openaq.org/v1/latest?country=GB&limit=1000"
 	);
 	const {
 		selectedCities,

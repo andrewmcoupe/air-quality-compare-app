@@ -1,39 +1,49 @@
 {
-  "name": "air-quality-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "0.19.0",
-    "cypress": "3.3.1",
-    "date-fns": "1.30.1",
-    "node-sass": "4.12.0",
-    "react": "^16.8.6",
-    "react-app-polyfill": "1.0.1",
-    "react-dom": "^16.8.6",
-    "react-icons": "3.7.0",
-    "react-scripts": "3.0.1",
-    "start-server-and-test": "1.9.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "cy:pretest": "start-server-and-test start http://localhost:3000 cy:test",
-    "cy:test": "cypress open"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "air-quality-app",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@babel/plugin-transform-regenerator": "7.4.5",
+		"@babel/preset-react": "7.0.0",
+		"@testing-library/react-hooks": "1.0.4",
+		"axios": "0.19.0",
+		"babel-jest": "24.8.0",
+		"babel-preset-env": "1.7.0",
+		"cypress": "3.3.1",
+		"date-fns": "1.30.1",
+		"enzyme": "3.10.0",
+		"enzyme-adapter-react-16": "1.14.0",
+		"jest": "24.8.0",
+		"jest-css-modules": "2.1.0",
+		"node-sass": "4.12.0",
+		"react": "^16.8.6",
+		"react-app-polyfill": "1.0.1",
+		"react-dom": "^16.8.6",
+		"react-icons": "3.7.0",
+		"react-scripts": "3.0.1",
+		"react-test-renderer": "16.8.6",
+		"start-server-and-test": "1.9.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "jest",
+		"cy:pretest": "start-server-and-test start http://localhost:3000 cy:test",
+		"cy:test": "cypress open"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
