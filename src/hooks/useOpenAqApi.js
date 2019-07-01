@@ -5,19 +5,24 @@ import axios from "axios";
 const useOpenAqApi = url => {
 	const [data, setData] = useState(null);
 	const [isLoading, setIsLoading] = useState(true);
+	const [error, setError] = useState(null);
 
 	async function fetchData() {
-		const { data } = await axios(url);
-		setData(data.results);
-		setIsLoading(false);
+		try {
+			const { data } = await axios(url);
+			setData(data.results);
+			setIsLoading(false);
+		} catch (error) {
+			setError(error);
+		}
 	}
 
 	useEffect(() => {
-		// Fetch data on initial load
+		// Fetch data once on initial load
 		fetchData();
 	}, []);
 
-	return { data, isLoading };
+	return { data, isLoading, error };
 };
 
 export default useOpenAqApi;

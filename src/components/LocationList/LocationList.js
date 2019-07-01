@@ -1,8 +1,8 @@
-import './LocationList.scss';
+import "./LocationList.scss";
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch } from "react-icons/fa";
 
 function LocationList(props) {
 	const inputEl = useRef(null);
@@ -10,16 +10,21 @@ function LocationList(props) {
 
 	const handleSelectedCity = city => {
 		props.handleSelectedCity(city);
-		inputEl.current.value = '';
+
+		// Clear input and give focus for next search query
+		inputEl.current.value = "";
 		inputEl.current.focus();
 
+		// Set list of cities to empty array
 		setFilteredCities([]);
 	};
 
 	const filterCities = query => {
 		if (query.length === 0) {
+			// Set list of cities to empty array if search term is empty
 			return setFilteredCities([]);
 		}
+
 		const lowercaseQuery = query.toLowerCase();
 
 		if (props.cities) {
@@ -27,6 +32,7 @@ function LocationList(props) {
 				return city.city.toLowerCase().startsWith(lowercaseQuery);
 			});
 
+			// Display all cities beginning with search term entered
 			setFilteredCities(filtered);
 		}
 	};

@@ -13,6 +13,7 @@ const useSelectedCity = () => {
 		// Add last updated data to selected city
 		const amendedCity = { ...city, updatedAt: data.results[0].lastUpdated };
 
+		// Add amended city to existing list of cities
 		setSelectedCities([...selectedCities, amendedCity]);
 	}
 

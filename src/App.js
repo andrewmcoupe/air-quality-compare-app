@@ -1,14 +1,15 @@
 import "./scss/App.scss";
 
+import React, { useMemo } from "react";
+
 import Intro from "./components/Intro/Intro";
 import LocationCard from "./components/LocationCard/LocationCard";
 import LocationList from "./components/LocationList/LocationList";
-import React from "react";
 import useOpenAqApi from "./hooks/useOpenAqApi";
 import useSelectedCity from "./hooks/useSelectedCity";
 
 function App() {
-	const { data: cities, isLoading } = useOpenAqApi(
+	const { data: cities, isLoading, error } = useOpenAqApi(
 		"https://api.openaq.org/v1/latest?country=GB&limit=1000"
 	);
 	const {
